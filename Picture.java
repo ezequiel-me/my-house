@@ -17,6 +17,7 @@ public class Picture
     private Circle sun;
     private Circle moon;
     private Square campo;
+    private Person persona;
     /**
      * Constructor for objects of class Picture
      */
@@ -73,14 +74,20 @@ public class Picture
         moon.moveVertical(220);
         moon.makeVisible();
         moon.slowMoveVertical(-250);
-        
     }
     public void amanecer()
     {
         moon.makeInvisible();
         sun.makeVisible();
         sun.slowMoveVertical(-220);
-    
+        persona = new Person();
+        persona.moveHorizontal(200);
+        persona.makeVisible();
+        persona.slowMoveHorizontal(-170);
+        persona = new Person();
+        persona.moveHorizontal(-260);
+        persona.makeVisible();
+        persona.slowMoveHorizontal(130);
     }
     /**
      * Change this picture to black/white display

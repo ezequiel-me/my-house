@@ -43,7 +43,6 @@ public class Picture
         wall.changeSize(120);
         wall.makeVisible();
         
-        
         window = new Square();
         window.changeColor("black");
         window.moveHorizontal(-120);
@@ -68,17 +67,21 @@ public class Picture
         sun.makeInvisible();
     
         moon = new Circle();
-        
         moon.changeColor("magenta");
         moon.changeSize(40);
         moon.moveHorizontal(-150);
         moon.moveVertical(220);
         moon.makeVisible();
         moon.slowMoveVertical(-250);
-    
         
     }
-
+    public void amanecer()
+    {
+        moon.makeInvisible();
+        sun.makeVisible();
+        sun.slowMoveVertical(-220);
+    
+    }
     /**
      * Change this picture to black/white display
      */
